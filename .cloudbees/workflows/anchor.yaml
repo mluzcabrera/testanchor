@@ -7,13 +7,13 @@ on:
 
 jobs:
   hello1:
-    steps: &hello
+    steps: &hello_steps
       - name: Say hello 
         uses: docker://golang:1.20.3-alpine3.17
         shell: sh
         run: | 
           echo "hello world"
- hello2:
-   steps:
-   <<: *hello
+
+  hello2:
+    steps: *hello_steps
 
