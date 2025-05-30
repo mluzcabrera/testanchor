@@ -17,6 +17,6 @@ jobs:
 
   hello2:
     steps: 
-      - *hello_steps
+      - <<: *hello_steps
         run: |
           echo "hello 2"
